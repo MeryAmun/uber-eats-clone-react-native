@@ -1,6 +1,6 @@
 import { SafeAreaView,View } from 'react-native'
 import React from 'react'
-import { Header,SearchBar } from '../../components'
+import { Categories, Header,SearchBar } from '../../components'
 import {styles} from './styles'
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
      <Header/>
      <SearchBar/>
      </View>
+     <Categories/>
     </SafeAreaView>
   )
 }
