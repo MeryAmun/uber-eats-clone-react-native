@@ -1,3 +1,4 @@
-export { default as Header } from './Header/Header'
-export { default as SearchBar } from './Header/SearchBar'
-export {default as Categories } from './categories/Categories'
+export { default as Header } from './HomeComponents/Header'
+export { default as SearchBar } from './HomeComponents/SearchBar'
+export {default as Categories } from './HomeComponents/Categories'
+export {default as RestaurantItem } from './HomeComponents/restaurantItem/RestaurantItem'

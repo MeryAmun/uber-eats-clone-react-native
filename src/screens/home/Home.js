@@ -1,6 +1,6 @@
-import { SafeAreaView,View } from 'react-native'
+import { SafeAreaView,ScrollView,View } from 'react-native'
 import React from 'react'
-import { Categories, Header,SearchBar } from '../../components'
+import { Categories, Header,RestaurantItem,SearchBar } from '../../components'
 import {styles} from './styles'
 
 const Home = () => {
@@ -10,7 +10,10 @@ const Home = () => {
      <Header/>
      <SearchBar/>
      </View>
-     <Categories/>
+   <ScrollView showsVerticalScrollIndicator={false}>
+   <Categories/>
+   <RestaurantItem/>
+   </ScrollView>
     </SafeAreaView>
   )
 }
