@@ -1,14 +1,14 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 
-const RestaurantInfo = () => {
+const RestaurantInfo = ({name,categories,price,reviews,rating}) => {
   return (
     <View style={styles.infoRoot}>
     <View style={styles.midView}>
-    <Text style={styles.bigText}>Farmhouse Kitchen Thai Cuisine</Text>
+    <Text style={styles.bigText}>{name}</Text>
     <Text>30-45 . min</Text>
     </View>
-    <View style={styles.smallestView}><Text style={styles.smallText}>4.5</Text></View>
+    <View style={styles.smallestView}><Text style={styles.smallText}>{rating}</Text></View>
 </View>
   )
 }

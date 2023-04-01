@@ -3,19 +3,29 @@ import RestaurantImage from "./RestaurantImage";
 import RestaurantInfo from "./RestaurantInfo";
 import { TouchableOpacity } from "react-native";
 
-const RestaurantItem = () => {
+
+const RestaurantItems = ({restaurants}) => {
   return (
     <TouchableOpacity activeOpacity={1} style={styles.touchable}>
-      <View style={styles.root}>
-      <RestaurantImage/>
-      <RestaurantInfo/>
+      {
+        restaurants?.map(({image_url,name,categories,price,reviews,rating},index) => (
+          <View style={styles.root} key={index}>
+      <RestaurantImage image={image_url} name={name}/>
+      <RestaurantInfo 
+      name={name} 
+      categories={categories} 
+      reviews={reviews}
+      price={price}
+      rating={rating}/>
     </View>
+        ))
+      }
     </TouchableOpacity>
   );
 };
 
 
-export default RestaurantItem;
+export default RestaurantItems;
 const styles = StyleSheet.create({
   touchable:{
 marginBottom:30

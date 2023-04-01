@@ -1,50 +1,12 @@
 import { Text, StyleSheet, Image, ScrollView, View } from "react-native";
-import React from "react";
-import { bread, coffee, deals, desserts, fastFood, shoppingBag, softDrink } from "../../assets";
+import { categoryItems } from "../../dummyData/data";
 
-const items = [
-  {
-    image: shoppingBag,
-    // image: require("../.././assets/images/shopping-bag.png"),
-    title: "Pick-up",
-  },
-  {
-    image: softDrink,
-    // image: require("../.././assets/images/soft-drink.png"),
-    title: "Soft Drinks",
-  },
-  {
-    image:bread,
-    // image: require("../.././assets/images/bread.png"),
-    title: "Bakery Items",
-  },
-  {
-    image: fastFood,
-    // image: require("../.././assets/images/fast-food.png"),
-    title: "Fast Foods",
-  },
-  {
-    image:deals,
-    // image: require("../.././assets/images/deals.png"),
-    title: "Deals",
-  },
-  {
-    image:coffee,
-    // image: require("../.././assets/images/coffee.png"),
-    title: "Coffee & Tea",
-  },
 
-  {
-    // image: require("../.././assets/images/desserts.png"),
-    image: desserts,
-    title: "Desserts",
-  },
-];
 const Categories = () => {
   return (
     <View style={styles.root}>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {items.map(({ image, title }, index) => (
+        {categoryItems.map(({ image, title }, index) => (
           <View style={styles.view} key={index}>
             <Image source={image} style={styles.image} />
             <Text style={styles.text}>{title}</Text>

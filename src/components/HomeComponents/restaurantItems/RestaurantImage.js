@@ -1,15 +1,24 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import { bg2 } from "../../../assets";
 
-const RestaurantImage = () =>
+
+const RestaurantImage = ({image,name}) =>
  (
     <View>
-   <Image
-        source={bg2}
+   {
+    !!name ? (
+      <Image
+        source={{uri:image}}
         style={styles.image}
       />
+    ) :(
+      <Image
+        source={image}
+        style={styles.image}
+      />
+    )
+   }
       <TouchableOpacity style={styles.touch}>
         <MaterialCommunityIcons name='heart-outline' size={25} color='#ffff'/>
       </TouchableOpacity>
