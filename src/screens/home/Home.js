@@ -8,7 +8,8 @@ import { localRestaurants, yelpApiKey } from '../../dummyData/data'
 
 const Home = () => {
   const [restaurantsData, setRestaurantsData] = useState([]);
-  const [city, setCity] = useState('San Francisco')
+  const [city, setCity] = useState('San Francisco');
+  const [activeTab, setActiveTab] = useState('delivery')
 
 
   const getRestaurantsFromYelp = async () => {
@@ -25,7 +26,7 @@ const Home = () => {
     try {
      return await fetch(url,apiOptions).then((response) => response.json())
       .then((data) => 
-      setRestaurantsData(data.businesses)
+      setRestaurantsData(data?.businesses?.filter((business) => business?.transactions?.includes(activeTab.toLowerCase())))
       )
     } catch (error) {
       console.log(error)
@@ -34,14 +35,14 @@ const Home = () => {
     }
   useEffect(() => {
       getRestaurantsFromYelp()
-  }, [city])
+  }, [city,activeTab])
   
 //  console.log(restaurantsData)
 
   return (
     <SafeAreaView style={styles.safeArea}>
      <View style={styles.rootView}>
-     <Header/>
+     <Header activeTab={activeTab} setActiveTab={setActiveTab}/>
      <SearchBar setCity={setCity}/>
      </View>
    <ScrollView showsVerticalScrollIndicator={false}>

@@ -19,7 +19,7 @@ const SearchBar = ({ setCity }) => {
         placeholder="Search"
         onPress={(data, details = null) => {
           // 'details' is provided when fetchDetails = true
-        console.log(data, details);
+       // console.log(data, details);
           const city = data.description.split(',')[0];
           setCity(city)
           console.log(city);
