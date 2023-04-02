@@ -2,8 +2,9 @@ import { SafeAreaView,ScrollView,View } from 'react-native'
 import React,{useState,useEffect} from 'react'
 import { BottomTabs, Categories, Header,RestaurantItems,SearchBar } from '../../components'
 import {styles} from './styles'
-import { localRestaurants, yelpApiKey } from '../../dummyData/data'
+
 import { Divider} from '@rneui/base';
+import { yelpApiKey } from '../../utils';
 
 
 

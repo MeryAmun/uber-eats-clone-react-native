@@ -3,7 +3,8 @@ import React, {useState} from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
-import { googlePlacesApiKey } from "../../dummyData/data";
+import { googlePlacesApiKey } from "../../utils";
+
 
 navigator.geolocation = require('react-native-geolocation-service');
 

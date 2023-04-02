@@ -1,9 +1,6 @@
 import { bg1,bg3, bread, coffee, deals, desserts, fastFood, restau, shoppingBag, softDrink} from "../assets";
 
 
-
-export const yelpApiKey = 'CtI8jbPHgJZ3t4GOtvNGrNQpYBS4xN4-OmEFVknOYlT50E0FfmvdATT63GrwBRFf_bZ6BGWwR5se0acRJMtCeXOc0ZejvIbBKku1FtIcWgzAyVMU_jaeKWIBfIMnZHYx'
-export const googlePlacesApiKey = 'AIzaSyDySvUNdcJ3eqRLl-T5O85gGF5_Y-pvsf4'
 export 
 const categoryItems = [
   {
