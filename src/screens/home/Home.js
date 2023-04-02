@@ -7,11 +7,12 @@ import { localRestaurants, yelpApiKey } from '../../dummyData/data'
 
 
 const Home = () => {
-  const [restaurantsData, setRestaurantsData] = useState(localRestaurants)
+  const [restaurantsData, setRestaurantsData] = useState([]);
+  const [city, setCity] = useState('San Francisco')
 
 
-  const getRestaurantsFromYelp = async (searchTerm) => {
-    const url = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=SanDiego`
+  const getRestaurantsFromYelp = async () => {
+    const url = `https://api.yelp.com/v3/businesses/search?term=restaurants&location=${city}`
     const apiOptions = {
       method: "GET",  
       headers: {
@@ -33,14 +34,15 @@ const Home = () => {
     }
   useEffect(() => {
       getRestaurantsFromYelp()
-  }, [])
+  }, [city])
   
 //  console.log(restaurantsData)
+
   return (
     <SafeAreaView style={styles.safeArea}>
      <View style={styles.rootView}>
      <Header/>
-     <SearchBar getRestaurantsFromYelp={getRestaurantsFromYelp}/>
+     <SearchBar setCity={setCity}/>
      </View>
    <ScrollView showsVerticalScrollIndicator={false}>
    <Categories/>
