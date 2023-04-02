@@ -23,7 +23,7 @@ const SearchBar = ({ setCity }) => {
        // console.log(data, details);
           const city = data.description.split(',')[0];
           setCity(city)
-          console.log(city);
+          // console.log(city);
         }}
         query={{
           key: googlePlacesApiKey,

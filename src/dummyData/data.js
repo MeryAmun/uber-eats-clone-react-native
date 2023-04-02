@@ -67,3 +67,36 @@ export const localRestaurants = [
         rating:4.9,
     },
 ]
+
+export const foods = [
+  {
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg21aAHqQGq7b_n6iUdEynjMtitg4sJQN6Fg&usqp=CAU',
+    name:'Tandoori chicken',
+    description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
+    price:'$19.20'
+    },
+  {
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazSg5iI_AFfsd_6F5nScSAtecPvimNmIzxA&usqp=CAU',
+    name:'Tandoori chicken',
+    description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
+    price:'$25.20'
+    },
+  {
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTG__K1UVaFWEVd4PFgMQx2NHRCLy40ydROfd2_Sz1lCoDvm_qXQNPJwmE01GhO-k84Tc&usqp=CAU',
+    name:'American chicken',
+    description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
+    price:'$30.20'
+    },
+  {
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZRl53W8VqiExgpx0wxm2TXkDwpfITdDSMcQ&usqp=CAU',
+    name:'Korean chicken',
+    description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
+    price:'$15.20'
+    },
+  {
+    image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooo2PY8vh1u9KwbbkYbdwHSjVhopAnWev1w&usqp=CAU',
+    name:'Tandoori chicken',
+    description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
+    price:'$25.29'
+    },
+]
