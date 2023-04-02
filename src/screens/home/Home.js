@@ -1,8 +1,9 @@
 import { SafeAreaView,ScrollView,View } from 'react-native'
 import React,{useState,useEffect} from 'react'
-import { Categories, Header,RestaurantItems,SearchBar } from '../../components'
+import { BottomTabs, Categories, Header,RestaurantItems,SearchBar } from '../../components'
 import {styles} from './styles'
 import { localRestaurants, yelpApiKey } from '../../dummyData/data'
+import { Divider} from '@rneui/base';
 
 
 
@@ -49,6 +50,8 @@ const Home = () => {
    <Categories/>
    <RestaurantItems restaurants={restaurantsData}/>
    </ScrollView>
+   <Divider width={1}/>
+   <BottomTabs/>
     </SafeAreaView>
   )
 }
