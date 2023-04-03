@@ -1,4 +1,5 @@
 {
+  "entryPoint": "./App.js",
   "expo": {
     "name": "blank",
     "slug": "blank",

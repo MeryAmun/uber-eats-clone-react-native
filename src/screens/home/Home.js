@@ -39,7 +39,7 @@ const Home = ({navigation}) => {
       getRestaurantsFromYelp()
   }, [city,activeTab])
   
-//  console.log(restaurantsData)
+ //console.log(restaurantsData)
 
   return (
     <SafeAreaView style={styles.safeArea}>
