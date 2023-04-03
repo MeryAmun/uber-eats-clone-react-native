@@ -8,7 +8,7 @@ import { yelpApiKey } from '../../utils';
 
 
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [restaurantsData, setRestaurantsData] = useState([]);
   const [city, setCity] = useState('San Francisco');
   const [activeTab, setActiveTab] = useState('delivery')
@@ -49,7 +49,7 @@ const Home = () => {
      </View>
    <ScrollView showsVerticalScrollIndicator={false}>
    <Categories/>
-   <RestaurantItems restaurants={restaurantsData}/>
+   <RestaurantItems restaurants={restaurantsData} navigation={navigation}/>
    </ScrollView>
    <Divider width={1}/>
    <BottomTabs/>

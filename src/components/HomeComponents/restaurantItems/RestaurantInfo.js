@@ -1,7 +1,7 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 
-const RestaurantInfo = ({name,categories,price,reviews,rating}) => {
+const RestaurantInfo = ({name,rating}) => {
   return (
     <View style={styles.infoRoot}>
     <View style={styles.midView}>
