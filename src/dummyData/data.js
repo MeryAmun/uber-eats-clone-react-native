@@ -79,7 +79,7 @@ export const foods = [
   {
     id:'2',
     image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSazSg5iI_AFfsd_6F5nScSAtecPvimNmIzxA&usqp=CAU',
-    name:'Tandoori chicken',
+    name:'German Chicken Fresh',
     description:'Amazing Indian dish with tendorioin chicken off the sizzle 🔥',
     price:'$25.20'
     },
