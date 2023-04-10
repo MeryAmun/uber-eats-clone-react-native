@@ -40,6 +40,7 @@ const Home = ({navigation}) => {
   }, [city,activeTab])
   
  //console.log(restaurantsData)
+//  console.log(restaurantsData[0].categories)
 
   return (
     <SafeAreaView style={styles.safeArea}>
