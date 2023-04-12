@@ -2,9 +2,15 @@ import { View, StyleSheet } from "react-native";
 import RestaurantImage from "./RestaurantImage";
 import RestaurantInfo from "./RestaurantInfo";
 import { TouchableOpacity } from "react-native";
+import Loader from "../../loader/Loader";
 
-const RestaurantItems = ({ restaurants, navigation }) => {
- // console.log(restaurants[0])
+const RestaurantItems = ({ loading,restaurants, navigation }) => {
+
+  if(loading) {
+    return (
+      <Loader/>
+    )
+  }
   return (
     <>
       {restaurants?.map(

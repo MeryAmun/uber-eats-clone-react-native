@@ -11,7 +11,8 @@ import { yelpApiKey } from '../../utils';
 const Home = ({navigation}) => {
   const [restaurantsData, setRestaurantsData] = useState([]);
   const [city, setCity] = useState('San Francisco');
-  const [activeTab, setActiveTab] = useState('delivery')
+  const [activeTab, setActiveTab] = useState('delivery');
+  const [loading, setLoading] = useState(false);
 
 
   const getRestaurantsFromYelp = async () => {
@@ -28,8 +29,10 @@ const Home = ({navigation}) => {
     try {
      return await fetch(url,apiOptions).then((response) => response.json())
       .then((data) => 
-      setRestaurantsData(data?.businesses?.filter((business) => business?.transactions?.includes(activeTab.toLowerCase())))
+      setRestaurantsData(data?.businesses?.filter((business) => business?.transactions?.includes(activeTab.toLowerCase()))),
+      setLoading(false)
       )
+
     } catch (error) {
       console.log(error)
     }
@@ -50,7 +53,7 @@ const Home = ({navigation}) => {
      </View>
    <ScrollView showsVerticalScrollIndicator={false}>
    <Categories/>
-   <RestaurantItems restaurants={restaurantsData} navigation={navigation}/>
+   <RestaurantItems restaurants={restaurantsData} navigation={navigation} loading={loading}/>
    </ScrollView>
    <Divider width={1}/>
    <BottomTabs/>

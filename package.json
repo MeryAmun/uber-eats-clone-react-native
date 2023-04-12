@@ -1,7 +1,6 @@
 {
   "main": "./App.js",
   "dependencies": {
-    "@expo/webpack-config": "^18.0.1",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/stack": "^6.3.16",
     "@rneui/base": "^4.0.0-rc.7",
@@ -24,6 +23,7 @@
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
+    "source-map": "^0.7.4",
     "tslib": "^2.5.0"
   },
   "devDependencies": {

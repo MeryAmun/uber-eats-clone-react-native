@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Home, OrdersScreen, RestaurantDetails } from "./src/screens";
 import { Provider as ReduxProvider } from 'react-redux';
 import { StoreProvider } from "./src/redux/store";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+
 
 export default function RootNavigation() {
   const Stack = createStackNavigator();
@@ -14,8 +14,6 @@ export default function RootNavigation() {
     headerShown: false,
   };
   return (
-    <SafeAreaProvider>
-    <SafeAreaView>
     <ReduxProvider store={StoreProvider}>
 <NavigationContainer>
       <Stack.Navigator screenOptions={screenOptions} initialRouteName="Home">
@@ -25,7 +23,5 @@ export default function RootNavigation() {
       </Stack.Navigator>
     </NavigationContainer>
     </ReduxProvider>
-    </SafeAreaView>
-    </SafeAreaProvider>
   );
 }
